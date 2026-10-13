@@ -1,0 +1,233 @@
+/* Shared final accessibility/theme overrides. Legal footer line is intentionally preserved. */
+.brand img{background:transparent!important;padding:0!important;border-radius:0!important;object-fit:contain}
+body.light-theme .brand img{filter:none!important}
+body:not(.light-theme) .brand img{filter:brightness(0) invert(1)}
+body.light-theme .header-cta{color:#fff!important;background:var(--red)}
+body.light-theme .header-cta:hover{color:#fff!important;background:var(--deep-red)}
+body.light-theme .footer-credit img{filter:brightness(0)}
+body:not(.light-theme) .footer-credit img{filter:none}
+.footer-links{grid-template-columns:repeat(4,minmax(0,1fr))}
+body :where(p,li,label,input,textarea,select,button,.nav-item>button,.nav-main-link,.search-trigger,.header-cta,.btn,.mega a,.quick-card small,.service-card p,.service-card a,.feature-links a,.department-card b,.audience-links a,.news-body>span,.event-list article>span,.event-list time,.news-body a,.event-list a,.footer-top>p,.footer-links b,.footer-links a,.footer-links small,.breadcrumb,.section-kicker,.eyebrow,.section-label,.popular-card p,.popular-card b,.category-card p,.doc-item,.dept-item small,.search-message,.service-search button,.footer-credit){font-size:max(16px,1em)!important}
+body :where(.section-kicker,.eyebrow,.section-label,.footer-links b,.breadcrumb,.news-body>span,.event-list article>span,.event-list time){font-size:16px!important}
+body .footer-bottom,body .footer-bottom *{font-size:12px!important}
+body.light-theme .search-trigger{color:#17232b}
+body.light-theme .menu-btn i{background:#17232b}
+body.light-theme .search-close{color:#17232b}
+body.light-theme .hero .btn-outline{border-color:#fff;color:#fff}
+body.light-theme .hero .btn-outline:hover{background:#fff;color:#17232b}
+body.light-theme .site-header.scrolled{background:rgba(255,255,255,.98)}
+body.light-theme .mega{background:#fff;box-shadow:0 18px 40px #0002;border:1px solid #dce4e8}
+body.light-theme .mega a{color:#17232b}
+body.light-theme .mega a:hover{color:var(--red)}
+body.light-theme .footer-credit{color:#17232b}
+@media(max-width:900px){.footer-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.footer-links{grid-template-columns:1fr}.footer-bottom,.footer-bottom *{font-size:12px!important}}
+
+/* Bring decorative labels and compact UI copy up to the 16px minimum. */
+body :where(.brand small,.quick-card>span,.service-card>div>span,.department-card>span,.hero-badge span,.hero-scroll,.popular-card .num,.dept-item span,.search-trigger span,.nav-item button span){font-size:16px!important}
+
+
+/* Header alignment: keep each chevron optically centered against its label. */
+.desktop-nav{align-items:stretch;gap:clamp(14px,1.55vw,30px)}
+.nav-item>button,.nav-main-link{display:inline-flex;align-items:center;justify-content:center;gap:10px;line-height:1.2;white-space:nowrap;font-weight:600!important}
+.nav-item>button span,.nav-chevron{font-size:20px!important;line-height:1!important;margin:0!important;transform:none!important;position:relative;top:-1px}
+.search-trigger{display:inline-flex;align-items:center;gap:10px;line-height:1.2;font-weight:700!important}
+.search-trigger span{font-size:32px!important;line-height:1!important;margin:0!important;transform:none!important;position:relative;top:-1px}
+.header-actions{align-items:center}
+.accessibility-fab{position:fixed;right:24px;bottom:24px;z-index:500;width:58px;height:58px;border:0;border-radius:50%;display:grid;place-items:center;background:#c8102e;color:#fff;box-shadow:0 5px 20px #0003;cursor:pointer}
+.accessibility-fab:hover{background:#a70d25;transform:translateY(-2px)}
+.accessibility-fab svg{width:31px;height:31px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.accessibility-panel{position:fixed;right:24px;bottom:94px;z-index:500;width:min(320px,calc(100vw - 32px));padding:20px;background:#fff;color:#17232b;border:1px solid #d5dde1;border-radius:12px;box-shadow:0 12px 40px #0003}
+.accessibility-panel[hidden]{display:none!important}.accessibility-panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.accessibility-panel-head strong{font-size:20px}.accessibility-panel-head button{border:0;background:transparent;font-size:28px;line-height:1;color:inherit}.accessibility-panel p{font-size:16px;line-height:1.5}.accessibility-controls{display:grid;gap:8px}.accessibility-controls button{min-height:44px;padding:10px 12px;text-align:left;border:1px solid #ccd5da;border-radius:6px;background:#f5f7f8;color:#17232b;font-size:16px;cursor:pointer}.accessibility-controls button:hover{background:#e7eef2}.a11y-larger{font-size:1.12em!important}.a11y-smaller{font-size:.94em!important}.a11y-high-contrast{background:#000!important;color:#fff!important;color-scheme:dark}
+.a11y-high-contrast main,.a11y-high-contrast section,.a11y-high-contrast article,.a11y-high-contrast footer,.a11y-high-contrast header{border-color:#fff!important}
+.a11y-high-contrast p,.a11y-high-contrast h1,.a11y-high-contrast h2,.a11y-high-contrast h3,.a11y-high-contrast li,.a11y-high-contrast label,.a11y-high-contrast .nav-main-link,.a11y-high-contrast .nav-item>button,.a11y-high-contrast .section-kicker{color:#fff!important}
+.a11y-high-contrast a,.a11y-high-contrast .text-link{color:#ffec00!important}
+.a11y-high-contrast .accessibility-fab{background:#ffec00!important;color:#000!important;border:3px solid #fff!important;box-shadow:0 0 0 3px #000,0 0 0 6px #ffec00!important;filter:none!important;opacity:1!important;visibility:visible!important}
+.a11y-high-contrast .accessibility-panel{background:#000!important;color:#fff!important;border:2px solid #ffec00!important}
+.a11y-high-contrast .accessibility-controls button{background:#000!important;color:#fff!important;border:2px solid #ffec00!important}.a11y-underline a{text-decoration:underline!important;text-underline-offset:3px}
+@media(max-width:900px){.desktop-nav{gap:8px}.nav-item>button,.nav-main-link{font-size:16px!important;gap:5px}.search-trigger{font-size:16px!important}}
+@media(max-width:560px){.accessibility-fab{right:16px;bottom:16px;width:54px;height:54px}.accessibility-panel{right:16px;bottom:80px}}
+
+/* Final refinements: requested solid accessibility symbol, theme control and hover/header fixes. */
+.accessibility-fab{background:#fff;color:#17232b;border:2px solid #17232b}
+.accessibility-fab:hover{background:#f0f3f4;color:#c8102e}
+.accessibility-fab svg{width:32px;height:32px;fill:currentColor;stroke:none}
+.department-card:hover h3{color:#fff!important}
+.nav-item>button,.nav-main-link{align-items:center;line-height:1;min-height:100%;}
+.nav-item>button span,.nav-chevron{top:0!important;display:inline-flex;align-items:center;align-self:center;line-height:1!important}
+.search-trigger{align-items:center;line-height:1!important}
+.search-trigger span{top:0!important;display:inline-flex;align-items:center;line-height:1!important}
+
+/* Final desktop navigation scale refinement */
+@media (min-width: 1201px) {
+  .site-header .desktop-nav .nav-item > .nav-main-link,
+  .site-header .desktop-nav .nav-item > button {
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .site-header .desktop-nav .nav-item > .nav-main-link,
+  .site-header .desktop-nav .nav-item > button {
+    font-size: 16px !important;
+  }
+}
+
+/* Verified final compact desktop header overrides: outrank earlier header and accessibility rules. */
+@media (min-width: 1201px) {
+  .site-header .desktop-nav { gap: 2px !important; }
+  .site-header .desktop-nav .nav-item { margin-inline: 0 !important; }
+  .site-header .desktop-nav .nav-item > .nav-main-link,
+  .site-header .desktop-nav .nav-item > button {
+    font-size: 13px !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0 !important;
+    gap: 2px !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
+  .site-header .nav-item .nav-chevron,
+  .site-header .nav-item .nav-chevron svg,
+  .site-header .nav-item > button span {
+    width: 12px !important;
+    height: 12px !important;
+    font-size: 12px !important;
+  }
+  .site-header .nav-item .nav-chevron { flex-basis: 12px !important; margin-left: 0 !important; }
+  .site-header .search-trigger { width: 50px !important; height: 50px !important; flex: 0 0 50px !important; }
+  .site-header .search-trigger span { font-size: 44px !important; width: 44px !important; height: 44px !important; }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .site-header .desktop-nav { gap: 1px !important; }
+  .site-header .desktop-nav .nav-item > .nav-main-link,
+  .site-header .desktop-nav .nav-item > button { font-size: 12px !important; gap: 2px !important; padding-left: 2px !important; padding-right: 2px !important; }
+}
+
+
+/* Final header grid refinement — overrides accessibility typography defaults */
+@media (min-width: 1100px) {
+  .site-header .desktop-nav { gap: 2px !important; }
+  .site-header .desktop-nav .nav-item > .nav-main-link,
+  .site-header .desktop-nav .nav-item > button {
+    font-size: 15px !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+    gap: 3px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1399px) {
+  .site-header .desktop-nav .nav-item > .nav-main-link,
+  .site-header .desktop-nav .nav-item > button {
+    font-size: 14px !important;
+  }
+}
+
+
+
+/* Final shared content-grid alignment for header */
+@media (min-width: 1100px) {
+  .site-header {
+    padding-left: 8vw !important;   /* align logo with hero heading */
+    padding-right: 7vw !important;  /* align CTA with section/card right edge */
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: clamp(20px, 2vw, 36px) !important;
+  }
+  .site-header .brand {
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+  .site-header .desktop-nav {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    align-items: center !important;
+    justify-content: initial !important;
+    column-gap: 0 !important;
+    gap: 0 !important;
+    height: 100% !important;
+  }
+  .site-header .desktop-nav .nav-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .site-header .desktop-nav .nav-item > .nav-main-link,
+  .site-header .desktop-nav .nav-item > button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    padding: 8px 3px !important;
+    margin: 0 !important;
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+  }
+  .site-header .desktop-nav .nav-chevron,
+  .site-header .desktop-nav .nav-chevron svg {
+    width: 14px !important;
+    height: 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    flex: 0 0 14px !important;
+    margin: 0 !important;
+  }
+  .site-header .header-actions {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: clamp(14px, 1.3vw, 24px) !important;
+    margin: 0 !important;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1450px) {
+  .site-header {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    gap: 14px !important;
+  }
+  .site-header .desktop-nav .nav-item > .nav-main-link,
+  .site-header .desktop-nav .nav-item > button {
+    font-size: 16px !important;
+    gap: 3px !important;
+  }
+}
+
+/* Downtown Tecumseh accessibility and readability pass */
+.tecumseh-site .skip-link{position:absolute;left:12px;top:-80px;z-index:2000;background:#fff;color:#17384f;padding:12px 16px;border:2px solid #17384f;font-size:16px;font-weight:700}
+.tecumseh-site .skip-link:focus{top:12px}
+.tecumseh-site .header-actions{display:flex;align-items:center;gap:14px}
+.tecumseh-site .header-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:12px 16px;background:#CF964B;color:#142f40!important;border:2px solid #CF964B;border-radius:2px;font-size:16px!important;font-weight:800;letter-spacing:.02em;text-decoration:none;white-space:nowrap}
+.tecumseh-site .header-cta:hover,.tecumseh-site .header-cta:focus-visible{background:#fff;color:#17384f!important;border-color:#fff}
+.tecumseh-site .site-header.scrolled .header-cta{background:#CF964B;color:#142f40!important}
+.tecumseh-site .accessibility-fab{position:fixed;right:22px;bottom:22px;z-index:1200;width:56px;height:56px;display:grid;place-items:center;border:2px solid #17384f;border-radius:50%;background:#fff;color:#17384f;box-shadow:0 4px 18px #0003;cursor:pointer}
+.tecumseh-site .accessibility-fab svg{width:32px;height:32px;fill:currentColor}
+.tecumseh-site .accessibility-fab:focus-visible,.tecumseh-site .accessibility-panel button:focus-visible,.tecumseh-site a:focus-visible,.tecumseh-site button:focus-visible,.tecumseh-site input:focus-visible,.tecumseh-site select:focus-visible{outline:3px solid #CF964B;outline-offset:3px}
+.tecumseh-site .accessibility-panel{position:fixed;right:22px;bottom:90px;z-index:1201;width:min(340px,calc(100vw - 32px));padding:20px;background:#fff;color:#17384f;border:2px solid #17384f;border-radius:12px;box-shadow:0 12px 36px #0003}
+.tecumseh-site .accessibility-panel[hidden]{display:none!important}
+.tecumseh-site .accessibility-panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.tecumseh-site .accessibility-panel-head strong{font-size:20px}.tecumseh-site .accessibility-panel-head button{font-size:28px;background:transparent;border:0;color:inherit;cursor:pointer}
+.tecumseh-site .accessibility-panel p{font-size:16px;line-height:1.6}.tecumseh-site .accessibility-controls{display:grid;gap:8px}
+.tecumseh-site .accessibility-controls button{min-height:44px;padding:10px 12px;text-align:left;border:1px solid #a8bac4;border-radius:6px;background:#f3f7f9;color:#17384f;font-size:16px;cursor:pointer}
+.tecumseh-site .accessibility-controls button:hover{background:#e2edf2}
+/* Keep all body copy, filters, links and controls comfortably readable. */
+.tecumseh-site :where(p,li,label,input,select,textarea,button,.nav-main-link,.text-link,.pill,.story-label,.card-number,.event-type,.event-meta,.event-results,.content-note,.plan-tiles span,.footer-links a,.footer-links b,.footer-brand p,.footer-bottom,.tc-footer-contact,.section-kicker,.eyebrow,.hero-scroll,.hero-badge span){font-size:max(16px,1em)}
+.tecumseh-site .footer-bottom,.tecumseh-site .footer-bottom *{font-size:14px!important}
+.tecumseh-site .hero-content{top:44%!important;transform:translateY(-40%)!important}
+.tecumseh-site .service-hero-copy{top:46%!important;transform:translateY(-32%)!important}
+.tecumseh-site .hero-copy,.tecumseh-site .service-hero-copy>p:not(.section-kicker),.tecumseh-site .event-card p,.tecumseh-site .content-note,.tecumseh-site .footer-brand p{font-size:16px!important;line-height:1.7}
+.tecumseh-site .mobile-cta{display:inline-flex!important;align-items:center;justify-content:center;font-size:18px!important;padding:15px 22px;border:2px solid #CF964B;color:#fff!important;margin-top:10px}
+.tecumseh-site .mobile-cta:hover{background:#CF964B;color:#17384f!important}
+@media(max-width:1100px){.tecumseh-site .header-cta{display:none}.tecumseh-site .header-actions{gap:10px}}
+@media(max-width:760px){.tecumseh-site .hero-content{top:42%!important;transform:translateY(-30%)!important}.tecumseh-site .service-hero-copy{top:48%!important;transform:translateY(-25%)!important}.tecumseh-site .accessibility-fab{right:16px;bottom:16px;width:52px;height:52px}.tecumseh-site .accessibility-panel{right:16px;bottom:78px}}
+@media(prefers-reduced-motion:reduce){.tecumseh-site .reveal{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
+.tecumseh-site .footer-bottom,.tecumseh-site .footer-bottom *{font-size:16px!important;line-height:1.5}
